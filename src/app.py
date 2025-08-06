@@ -67,7 +67,7 @@ if st.button("Realice Predicción"):
     st.write("Prediction:", pred_class)
     #
     # la precision del resultado 
-    a = 1
+    j = 2+3
 
 
 
