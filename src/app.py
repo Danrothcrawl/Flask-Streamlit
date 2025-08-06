@@ -19,7 +19,8 @@ Esta función específica lee el flujo de bytes del objeto
    binario de lectura, "rb") y lo transforma de nuevo en 
    su forma original, un objeto Python. 
 """
-model = load(open("/workspaces/ml-streamlit/models/modelo.pkl", "rb"))
+model = load(open("/workspaces/ML-FlaskStreamlit/models/best_dt.pkl", "rb"))
+accuracy = load(open("/workspaces/ML-FlaskStreamlit/models/accuracy.pkl", "rb"))
 
 # hacer una lista con las categorias del target
 class_dict = {
@@ -65,10 +66,5 @@ if st.button("Realice Predicción"):
     pred_class = class_dict[prediction]
     st.success("Resultado para el modelo de regresión lineal:")
     st.write("Prediction:", pred_class)
-    #
-    # la precision del resultado 
-    j = 2+3
-
-
-
-    # resultados para otro 
+    st.title("Precision")
+    st.write("Precision:", round(accuracy*100, 2), "%")
