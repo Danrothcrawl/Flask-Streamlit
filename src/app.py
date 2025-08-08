@@ -6,7 +6,7 @@ import sklearn
 import pandas as pd
 
 
-st.title("Conjuto de datos con el cual se entreno el modelo ")
+st.title("Conjunto de datos con el cual se entreno el modelo ")
 url = "https://raw.githubusercontent.com/4GeeksAcademy/decision-tree-project-tutorial/main/diabetes.csv"
 df = pd.read_csv(url)
 st.dataframe(df)
